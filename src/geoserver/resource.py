@@ -30,9 +30,8 @@ def write_metadata_link_list(name):
         builder.start(name, dict())
         if md_links:
             for (mime, md_type, content_url) in md_links:
-                # geoserver supports only three mime
-                if md_type not in ['ISO19115:2003', 'FGDC', 'TC211']:
-                    mime = 'other'
+                # geoserver supports 4 metadata types
+                if md_type not in ['ISO19115:2003', 'FGDC', 'TC211', '19139']:
                     md_type = 'other'
                 builder.start("metadataLink", dict())
                 builder.start("type", dict())
