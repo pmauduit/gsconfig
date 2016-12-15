@@ -52,7 +52,7 @@ def _write_attribution(builder, attribution):
         builder.start("logoHeight", dict())
         builder.data(attribution.height)
         builder.end("logoHeight")
-+    if attr.href is not None:
+    if attr.href is not None:
         builder.start("href", dict())
         builder.data(attr.href)
         builder.end("href")
